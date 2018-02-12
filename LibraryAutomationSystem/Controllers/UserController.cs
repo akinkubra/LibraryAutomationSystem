@@ -82,7 +82,7 @@ namespace LibraryAutomationSystem.Controllers
             }
             else if (string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(pass))
             {
-                TempData["notice"] = "Lütfen zorunlu alanları doldurunuz";
+                TempData["notice"] = "Lütfen zorunlu alanları doldurunuz!";
                 return View();
             }
             else
@@ -107,7 +107,7 @@ namespace LibraryAutomationSystem.Controllers
         {
             if (string.IsNullOrEmpty(model.Username))
             {
-                TempData["notice"] = "Lütfen kullanıcı adınızı giriniz";
+                TempData["notice"] = "Lütfen kullanıcı adınızı giriniz!";
                 return View();
             }
             else
@@ -117,7 +117,7 @@ namespace LibraryAutomationSystem.Controllers
                                   select u).FirstOrDefault();
                 if (foundUser == null)
                 {
-                    TempData["notice"] = "Yanlış kullanıcı adı girdiniz.";
+                    TempData["notice"] = "Yanlış kullanıcı adı girdiniz!";
                 }
                 else
                 {
