@@ -1,0 +1,58 @@
+﻿@model LibraryAutomationSystem.ViewModel.BookViewModel
+
+@{
+    ViewBag.Title = "Seçili Kitap";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <div class="row">
+        <div class="col-md-12">
+            <img class="img-responsive" id="image" src="~/Content/IMG/imgk1.jpg" />
+            <div id="documents">
+                @if (TempData["notice"] != null)
+                {
+                    <div style="background-color: #99CCCC; margin: 10px 10px; width: 336px; margin-left: 45px;" class="msgDiv">
+                        <img src="~/Content/IMG/checked.png" />
+                        <p id="message">@TempData["notice"]</p>
+                    </div>
+                }
+                <div id="Book">
+                    <div class="form-group">
+                        <label class="control-label">Kitap Çeşiti</label>
+                        <div class="display-field">
+                            @Html.DisplayFor(model => model.CategoryName)
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="form-group">
+                        <label class="control-label">Kitap Adı</label>
+                        <div class="display-field">
+                            @Html.DisplayFor(model => model.BookName)
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="form-group">
+                        <label class="control-label">Yazar Adı</label>
+                        <div class="display-field">
+                            @Html.DisplayFor(model => model.AuthorName)
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="form-group">
+                        <label class="control-label">Yayıncı Adı</label>
+                        <div class="display-field">
+                            @Html.DisplayFor(model => model.PublisherName)
+                        </div>
+                    </div>
+                    <div class="btnDiv">
+                        <input type="submit" id="btn" value="KİTABI AL"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

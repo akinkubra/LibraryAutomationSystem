@@ -1,0 +1,77 @@
+﻿@model IEnumerable<LibraryAutomationSystem.ViewModel.BookViewModel>
+
+@{
+    ViewBag.Title = "Mevcut Dokümanlar";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <img class="img-responsive" id="image" src="~/Content/IMG/imgk1.jpg" />
+        <div id="documents">
+            <h2>Mevcut Kitaplar</h2>
+
+            <table class="table-hover table-responsive" id="AllBook">
+                <tr>
+                    <th>
+                        <label class="control-label">Kategori</label>
+                    </th>
+                    <th>
+                        <label class="control-label">Kitap Adı</label>
+                    </th>
+                    <th>
+                        <label class="control-label">Yazar Adı</label>
+                    </th>
+                    <th>
+                        <label class="control-label">Yayıncı adı</label>
+                    </th>
+                    <th>
+                        <label class="control-label">Adet</label>
+                    </th>
+                    <th>
+
+                    </th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <div class="display-field">
+                                @Html.DisplayFor(modelItem => item.CategoryName)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="display-field">
+                                @Html.DisplayFor(modelItem => item.BookName)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="display-field">
+                                @Html.DisplayFor(modelItem => item.AuthorName)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="display-field">
+                                @Html.DisplayFor(modelItem => item.PublisherName)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="display-field">
+                                @Html.DisplayFor(modelItem => item.BookQuantity)
+                            </div>
+                        </td>
+                        <td>
+                            @if (item.BookQuantity != 0)
+                            {
+                                @Html.ActionLink("Kitabı Al", "Book", new {BookName = item.BookName})
+                            }
+                        </td>
+                    </tr>
+                }
+
+            </table>
+
+        </div>
+    </div>
+</div>

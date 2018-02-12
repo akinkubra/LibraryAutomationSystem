@@ -1,0 +1,70 @@
+﻿@model LibraryAutomationSystem.ViewModel.BookViewModel
+
+@{
+    ViewBag.Title = "Kitap Al";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <div class="row">
+        <div class="col-md-12">           
+            <img class="img-responsive" id="image" src="~/Content/IMG/img3.jpg" />
+            <div id="documents">
+                @if (TempData["notice"] != null)
+                {
+                    <div style="background-color: #99CCCC; margin: 10px 10px; width: 336px; margin-left: 45px;" class="msgDiv">
+                        <img style="width: 35px;" src="~/Content/IMG/warning.png" />
+                        <p id="message">@TempData["notice"]</p>
+                    </div>
+                }
+                <h2>Kitabı almak için gerekli bilgilerinizi giriniz</h2>
+                <div id="Book">
+                    <div class="form-group">
+                        <label class="control-label">Kategori</label>
+                        <div class="editor-field">
+                            @Html.DropDownListFor(model => Model.CategoryName, (IEnumerable<SelectListItem>)ViewData["categories"], new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.CategoryName)
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="form-group">
+                        <label class="control-label">Kitap Adı</label>
+                        <span>*</span>
+                        <div class="editor-field">
+                            @Html.DropDownListFor(model => Model.BookName, (IEnumerable<SelectListItem>)ViewData["books"], new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.BookName)
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="form-group">
+                        <label class="control-label">Yazar Adı</label>
+                        <div class="editor-field">
+                            @Html.EditorFor(model => model.AuthorName)
+                            @Html.ValidationMessageFor(model => model.AuthorName)
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="form-group">
+                        <label class="control-label">Yayıncı Adı</label>
+                        <div class="editor-field">
+                            @Html.EditorFor(model => model.PublisherName)
+                            @Html.ValidationMessageFor(model => model.PublisherName)
+                        </div>
+                    </div>
+                    <div class="btnDiv">
+                        <input type="submit" id="btn" value="Kitap Al"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+
+
+

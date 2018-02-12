@@ -1,0 +1,145 @@
+﻿@using System.Web.Helpers
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src="~/Scripts/jquery-3.1.1.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/CSS/style.css" rel="stylesheet" />
+
+    <script>
+        $(document).ready(function () {
+            $(".home").click(function () {
+                window.location.assign("/Home/Index");
+            });
+
+            $(".Books").click(function () {
+                window.location.assign("/AllBooks/AllBooks");
+            });
+
+            $(".BookReceive").click(function () {
+                window.location.assign("/BookReceive/BookDelete");
+            });
+
+            $(".BookGive").click(function () {
+                window.location.assign("/BookGive/BookAdd");
+            });
+
+            $(".MyProcess").click(function () {
+                window.location.assign("/Process/MyProcess");
+            });
+
+            $(".logOut").click(function () {
+                window.location.assign("/User/Login");
+            });
+
+        })
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#UserName").attr("autocomplete", "off");
+            $("#BookName").attr("autocomplete", "off");
+            $("#AuthorName").attr("autocomplete", "off");
+            $("#PublisherName").attr("autocomplete", "off");
+        })
+        $("#btn").on('click', function () {
+            $("#UserName").val()
+            (
+            $.trim($("#UserName").val())
+            )
+            $("#Mail").val()
+            (
+            $.trim($("#Mail").val())
+            )
+            $("#CategoryName").val()
+            (
+            $.trim($("#CategoryName").val())
+            )
+            $("#BookName").val()
+            (
+            $.trim($("#BookName").val())
+            )
+            $("#AuthorName").val()
+            (
+            $.trim($("#AuthorName").val())
+            )
+            $("#PublisherName").val()
+            (
+            $.trim($("#PublisherName").val())
+            )
+        });
+
+    </script>
+</head>
+<body>
+
+    <header>
+        <div class="row">
+            <div class="col-md-12">
+                <h1 id="baslik" class="col-md-12">Kütüphane Sayfasına Hoşgeldiniz</h1>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="row">
+            <div class="col-md-1">
+                <div class="home">
+                    <div class="nav-item first home">
+                        <span class="header">Ana Sayfa</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="Books">
+                    <div class="nav-item Books">
+                        <span class="header">Mevcut Dokümanlar</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="BookReceive">
+                    <div class="nav-item BookReceive">
+                        <span class="header">Kitap Al</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="BookGive">
+                    <div class="nav-item BookGive">
+                        <span class="header">Kitap Ver</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="MyProcess">
+                    <div class="nav-item last MyProcess">
+                        <span class="header">İşlemlerim</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="logOut">
+                    <div class="nav-item first last logOut">
+                        <span class="header">Çıkış yap</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section id="container">
+        <section id="content">
+            @RenderBody()
+        </section>
+    </section>
+    <footer>
+        <small style="text-align: center">ONLİNE KÜTÜPHANE</small>
+    </footer>
+
+
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

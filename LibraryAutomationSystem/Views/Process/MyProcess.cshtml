@@ -1,0 +1,106 @@
+﻿@model IEnumerable<LibraryAutomationSystem.ViewModel.BookViewModel>
+
+@{
+    ViewBag.Title = "İşlemlerim";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <img class="img-responsive" id="image" src="~/Content/IMG/img5.jpeg" />
+        <div id="documents">
+            @if (TempData["notice"] != null)
+            {
+                if (TempData["notice"] != "Herhangi bir işleminiz bulunmamaktadır." && TempData["notice"] != "")
+                {
+                    <div style="background-color: #99CCCC; margin: 10px 10px; width: 336px;" class="msgDiv">
+                        <img style="width: 35px;" src="~/Content/IMG/warning.png"/>
+                        <p style="margin-left: 10px; margin-top: 25px; color: red;">@TempData["notice"]</p>
+                    </div>
+                }
+                else
+                {
+                    <div style="background-color: #99CCCC; margin: 10px 10px; width: 380px; " class="msgDiv">
+                        <p style="margin-left: 10px; margin-top: 25px; color: black;">@TempData["notice"]</p>
+                    </div>
+                }
+            }
+            <h2 style="margin-left: 10px; color: #008B8B;"><b>İşlemlerim</b></h2>
+            <table class="table-hover table-responsive" id="AllBook">
+                <tr>
+                    <th>
+                        Kategori
+                    </th>
+                    <th>
+                        Kitap Adı
+                    </th>
+                    <th>
+                        Yazarın Adı
+                    </th>
+                    <th>
+                        Yayıncı Adı
+                    </th>
+                    <th>
+                        Alış Tarihi
+                    </th>
+                    <th>
+                        Veriş Tarihi
+                    </th>
+                    <th>
+                        Ceza Ücreti(TL)
+                    </th>
+                    <th></th>
+
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CategoryName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BookName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AuthorName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PublisherName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ReceivingDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.GivingDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PenaltyQuantity)
+                        </td>
+                        <td>
+                            @if (item.PenaltyQuantity != 0)
+                            {
+                                if (item.GivingDate != null)
+                                {
+                                    @Html.ActionLink("Ödeme Yap", "Payment", new {penalty = item.PenaltyQuantity, bookName = item.BookName})
+                                }
+                                else
+                                {
+                                    @Html.ActionLink("Kitabı Ver", "BookGive", new {penalty = item.PenaltyQuantity, bookName = item.BookName})
+                                }
+                            }
+                            else
+                            {
+                                if (item.GivingDate == null)
+                                {
+                                    @Html.ActionLink("Kitabı Ver", "BookGive", new {penalty = item.PenaltyQuantity, bookName = item.BookName})
+                                }
+                            }
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>
+

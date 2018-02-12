@@ -1,0 +1,104 @@
+﻿@model LibraryAutomationSystem.ViewModel.UserViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="~/Scripts/jquery-3.1.1.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/CSS/style.css" rel="stylesheet" />
+    <script src="~/Scripts/UserAdd.js"></script>
+    <title>Kayıt</title>
+</head>
+<body style="background-image: url('/Content/IMG/img6.jpg'); background-repeat:no-repeat; background-size:cover">
+
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        <div class="row">
+            <div class="col-md-12">
+                @if (TempData["notice"] != null)
+                {
+                    var warning = TempData["notice"];
+                    if (warning == "Kütüphaneye başarıyla kayıt oldunuz")
+                    {
+                        <div style="background-color: #99CCCC; margin: 10px 10px; width: 336px; margin-left: 95px;" class="msgDiv">
+                            <img src="~/Content/IMG/checked.png" />
+                            <p id="message">@TempData["notice"]</p>
+                        </div>
+                    }
+                    else
+                    {
+                        <div style="background-color: #99CCCC; margin: 10px 10px; width: 336px; margin-left: 95px;" class="msgDiv">
+                            <img style="width: 35px;" src="~/Content/IMG/warning.png" />
+                            <p id="message">@TempData["notice"]</p>
+                        </div>
+                    }
+                }
+                <fieldset>
+                    <h2><b>Kayıt İşlemleri</b></h2>
+                    <div class="form-group">
+                        <label class="control-label">Adı</label>
+                        <span>*</span>
+                        <div class="editor-field">
+                            @Html.EditorFor(model => model.Name)
+                            @Html.ValidationMessageFor(model => model.Name)
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="form-group">
+                        <label class="control-label">Soyadı</label>
+                        <span>*</span>
+                        <div class="editor-field">
+                            @Html.EditorFor(model => model.Surname)
+                            @Html.ValidationMessageFor(model => model.Surname)
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="form-group">
+                        <label class="control-label">Kullanıcı Adı</label>
+                        <span>*</span>
+                        <div class="editor-field">
+                            @Html.EditorFor(model => model.Username)
+                            @Html.ValidationMessageFor(model => model.Username)
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="form-group">
+                        <label class="control-label">Şifre</label>
+                        <span>*</span>
+                        <div class="editor-field">
+                            @Html.EditorFor(model => model.Password)
+                            @Html.ValidationMessageFor(model => model.Password)
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="form-group">
+                        <label class="control-label">Mail</label>
+                        <span>*</span>
+                        <div class="editor-field">
+                            @Html.EditorFor(model => model.Mail)
+                            @Html.ValidationMessageFor(model => model.Mail)
+                        </div>
+                    </div>
+                    <div class="btnDiv">
+                        <input type="submit" id="btn" value="Kayıt Ol"/>
+                        @Html.ActionLink("Giriş Yap", "Login")
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    }
+</body>
+</html>

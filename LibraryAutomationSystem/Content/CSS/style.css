@@ -1,0 +1,366 @@
+body {
+    background-repeat: repeat;
+    background: #f4f4f4;
+    font-family: 'Lato', sans-serif;
+    font-size: medium;
+    margin: auto;
+    overflow-y:auto;
+}
+
+#container {
+   
+}
+
+header {
+    height: 100%;
+    background-color: #008B8B;
+}
+
+footer {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    position:fixed;
+    bottom: 0px;
+    background: #008B8B;
+    font-size: x-small;
+}
+
+#documents {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+
+tr {
+    border: double;
+    border-color: #008B8B;
+}
+
+th {
+    text-align: left;
+    padding: 0;
+    border: double;
+    border-color: #008B8B;
+}
+
+#search {
+    width: 300px;
+    padding: 3px;
+    height: 40px;
+    position: absolute;
+    left: 100px;
+    top: 110px;
+    /*background-color: #f4f4f4;*/
+    background-color: #99CCCC;
+    border-radius: 0 12px;
+    /*box-shadow: 0 0 4px #1c3564;*/
+}
+
+#search-area {
+    width: 205px;
+    height: 30px;
+    line-height: 30px;
+    text-indent: 8px;
+    position: relative;
+    float: left;
+    border: groove;
+    border-radius: 0 8px;
+    /*box-shadow: 0 0 2px #1c3564 inset;*/
+    background: #f4f4f4;
+    outline: none;
+}
+
+.search-text {
+    width: 205px;
+    height: 22px;
+    line-height: 30px;
+    border: 0;
+    outline: none;
+    text-indent: 8px;
+    float: left;
+    border-radius: 0 8px;
+    background: transparent;
+    outline: none;
+}
+
+#search-button {
+    width: 47px;
+    height: 32px;
+    line-height: 32px; /*dikeyde ortalanmasý için height ve line-height e ayný deðer verdik.*/
+    text-align: center;
+    position: relative;
+    float: left;
+    margin-left: 5px;
+    border-radius: 0 8px;
+    background: #0d6636;
+    box-shadow: 0 0 2px 1px #1c3564 inset;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    outline: none; /*týklandýðý zaman sarý çizgiyi gizlemek için.*/
+}
+
+    #search-button:hover {
+        box-shadow: 0 0 10px 4px #1c3564 inset;
+        text-shadow: 0 0 2px yellow;
+        border-radius: 0 12px;
+    }
+
+    #search-button input[type="submit"] {
+        background: transparent;
+        border: none;
+        color: white;
+        outline: none;
+        width: 43px;
+    }
+
+nav {
+    height: 35px;
+    line-height: 40px;
+    text-align: center;
+    position: relative;
+    margin: 15px 0;
+    box-shadow: 0 0 4px #f4f4f4;
+    border-radius: 0 12px;
+    background: #f4f4f4;
+    cursor: pointer;
+}
+
+.nav-item {
+    width: 215px;
+    height: 35px;
+    position: relative;
+    float: left;
+    background: #66CCCC;
+}
+
+.first {
+    border-radius: 0 0 0 12px;
+    width: 180px;
+}
+
+.last {
+    border-radius: 0 12px 0 12px;
+    border: 0;
+}
+
+.logOut {
+    position: absolute;
+    right: 0px;
+    width: 140px;
+}
+
+#image {
+    width: 100%;
+    height: 792px;
+    margin: auto;
+    position: relative;
+}
+
+.editor-field {
+    margin-left: 20px;
+}
+
+h2 {
+    margin-left: 10px;
+    color: #15465f;
+}
+
+
+fieldset {
+    background-image: url(~/Content/IMG/imgk1.jpg);
+    background-repeat: repeat;
+    border: double;
+    border-color: #008B8B;
+    background: #99CCCC;
+    margin-left: 95px;
+    margin-top: 20px;
+    width: 280px;
+}
+
+#Book {
+    border: double;
+    border-color: #008B8B;
+    background: #99CCCC;
+    margin-left: 45px;
+    margin-top: 20px;
+    width: 280px;
+}
+
+#Book option {
+    width: 201px;
+}
+#AllBook {
+    width: 1275px;
+    border: double;
+    border-color: #008B8B;
+    background: #99CCCC;
+    margin-left: 10px;
+}
+.display-field {
+    margin-left: 10px;
+}
+
+#Mail {
+    width: 250px;
+}
+
+#Password {
+    width: 250px;
+}
+
+#Surname {
+    width: 250px;
+}
+
+#Name {
+    width: 250px;
+}
+
+#Username {
+    width: 250px;
+}
+
+
+.btnDiv {
+    margin-bottom: 15px;
+}
+
+#btn {
+    width: 100px;
+    height: 35px;
+    margin-left: 10px;
+    background-color: #15465f;
+    color: #f4f4f4;
+}
+
+#prc {
+    width: 110px;
+    height: 35px;
+    margin-left: 10px;
+    background-color: #15465f;
+    color: #f4f4f4;
+}
+
+
+#sfre {
+    width: 150px;
+    height: 35px;
+    margin-left: 10px;
+    background-color: #15465f;
+    color: #f4f4f4;
+}
+
+#kytOl {
+    width: 175px;
+    height: 50px;
+    position: absolute;
+    top: 300px;
+    right: 20px;
+    background-color: #008B8B;
+    color: #f4f4f4;
+}
+
+    #kytOl:hover {
+        background-color: #66CCCC;
+        color: black;
+    }
+
+#Grsyp {
+    width: 175px;
+    height: 50px;
+    position: absolute;
+    top: 300px;
+    left: 20px;
+    background-color: #008B8B;
+    color: #f4f4f4;
+}
+
+    #Grsyp:hover {
+        background-color: #66CCCC;
+        color: black;
+    }
+
+a {
+    margin-left:10px;
+    margin-top:20px;
+    color: #1c3564;
+}
+
+#baslik {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 8px;
+    color: white;
+    font-size: xx-large;
+    text-align: center;
+
+}
+
+#message {
+    margin-left:0px;
+    margin-bottom:10px;
+    color:#15465f;
+    display: inline;
+}
+span {
+    width: 200px;
+    color:#ff0000;
+}
+
+.BookReceive {
+    margin-left: -28px;
+}
+
+.BookGive {
+    margin-left: -23px;
+}
+
+.MyProcess {
+    margin-left: -23px;
+}
+
+.Books {
+    width: 281px;
+}
+
+
+#myProcess {
+    margin-left: 30px;
+}
+.sifre {
+    margin-top:20px;
+    margin-left:10px;
+}
+
+.header {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin:5px;
+    color:black;
+}
+#payment {
+    width: 130px;
+    height: 35px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background-color: #15465f;
+    color: #f4f4f4;
+}
+#CategoryName {
+    margin-top: -1px;
+    width: 201px;
+    border-radius: 0 8px;
+    height: 31px;
+    box-shadow: -1px -1px 0px 0px grey;
+}
+#BookName {
+    margin-top: -1px;
+    width: 201px;
+    border-radius: 0 8px;
+    height: 31px;
+    box-shadow: -1px -1px 0px 0px grey;
+}
+

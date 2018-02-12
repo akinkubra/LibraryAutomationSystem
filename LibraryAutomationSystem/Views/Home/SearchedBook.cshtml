@@ -1,0 +1,69 @@
+﻿@model List<LibraryAutomationSystem.ViewModel.BookViewModel>
+
+@{
+    ViewBag.Title = "Aranan Kitap";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <img class="img-responsive" id="image" src="~/Content/IMG/imgk2.jpg" />
+        <div id="documents">
+            @if (TempData["notice"] != null)
+            {
+                <div style="background-color: #99CCCC; margin: 10px 10px; width: 336px; margin-left: 95px;" class="msgDiv">
+                    <img style="width: 35px;" src="~/Content/IMG/warning.png" />
+                    <p style="margin-left: 10px; color: #15465f; font-size: large">@TempData["notice"]</p>
+                </div>
+            }
+            <h2 style="margin-left: 10px; color: #008B8B;"><b>Aranan Kitap</b></h2>
+            <table class="table-hover table-responsive" id="AllBook">
+                <tr>
+                    <th>
+                        Kategori
+                    </th>
+                    <th>
+                        Kitap Adı
+                    </th>
+                    <th>
+                        Yazarın Adı
+                    </th>
+                    <th>
+                        Yayıncı Adı
+                    </th>
+                    <th>
+                        Kitap Adeti
+                    </th>
+                    <th>
+
+                    </th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CategoryName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BookName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AuthorName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PublisherName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BookQuantity)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Kitabı Al", "SelectedBook", new {BookName = item.BookName, data = item})
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+</div>

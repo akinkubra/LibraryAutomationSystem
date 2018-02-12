@@ -1,0 +1,48 @@
+﻿@model LibraryAutomationSystem.ViewModel.BookViewModel
+
+@{
+    ViewBag.Title = "Kütüphane Anasayfa";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <div class="row">
+
+            <div class="col-md-12">
+                <img class="img-responsive" id="image" src="~/Content/IMG/K1.png" />
+                <div id="documents">
+
+                    <h2 style="margin-left: 10px; color: #00ffff"><b>Kitap İsmine Göre Arama Yapınız</b></h2>
+                    <div id="search">
+                        <div class="editor-field">
+                            <div id="search-area">
+                                @Html.EditorFor(model => model.BookName, new { @class = "search-text" })
+                                @Html.ValidationMessageFor(model => model.BookName)
+                            </div>
+                        </div>
+                        <div id="search-button">
+                            <input type="submit" class="search-button" value="Ara" />
+                        </div>
+                    </div>
+                    @if (TempData["notice"] != null)
+                    {
+                        <div style="display: inline-block; background-color: #99CCCC; margin: 40px 10px; width: 400px; margin-left: 470px;" class="msgDiv">
+                            <img style="width: 35px;" src="~/Content/IMG/warning.png" />
+                            <p style="display: inline;margin-left: 10px; color: #008B8B; font-size: large">@TempData["notice"]</p>
+                        </div>
+                    }
+                </div>
+            </div>     
+    </div>
+
+}
+
+@section Scripts {
+    <script src="~/Scripts/jquery-ui.min.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+}
+

@@ -1,0 +1,33 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/CSS/style.css" rel="stylesheet" />
+    <title>Online Kütüphane</title>
+    <script type="text/javascript">
+        function kayit() {
+            window.location.assign("/User/UserAdd");
+        }
+        function giris() {
+            window.location.assign("/User/Login");
+        }
+    </script>
+
+</head>
+<body style="background-image: url('/Content/IMG/ktp.jpg')">
+    <div class="row">
+        <div class="col-md-6">
+            <input onclick="kayit()" type="button" id="kytOl" value="Kayıt Ol" />
+        </div>
+        <div class="col-md-6">
+            <input onclick="giris()" type="button" id="Grsyp" value="Giriş Yap" />
+        </div>
+    </div>
+</body>
+</html>
