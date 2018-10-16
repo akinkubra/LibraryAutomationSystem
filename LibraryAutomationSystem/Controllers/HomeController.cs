@@ -35,7 +35,8 @@ namespace LibraryAutomationSystem.Controllers
             else
             {
                 return RedirectToAction("SearchedBook", new { BookName = searching.BookName });
-            }         
+            }        
+             
         }
 
         public ActionResult SearchedBook(string bookName)
