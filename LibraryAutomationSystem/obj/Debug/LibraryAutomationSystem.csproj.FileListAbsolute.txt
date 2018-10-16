@@ -43,3 +43,46 @@ C:\Users\kubra\Documents\Visual Studio 2013\Projects\LibraryAutomationSystem\Lib
 C:\Users\kubra\Documents\Visual Studio 2013\Projects\LibraryAutomationSystem\LibraryAutomationSystem\bin\System.Threading.Tasks.xml
 C:\Users\kubra\Documents\Visual Studio 2013\Projects\LibraryAutomationSystem\LibraryAutomationSystem\obj\Debug\LibraryAutomationSystem.csproj.App.config
 C:\Users\kubra\Documents\Visual Studio 2013\Projects\LibraryAutomationSystem\LibraryAutomationSystem\obj\Debug\LibraryAutomationSystem.csprojResolveAssemblyReference.cache
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\LibraryAutomationSystem.dll.config
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\LibraryAutomationSystem.dll
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\LibraryAutomationSystem.pdb
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\AutoMapper.dll
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\EntityFramework.dll
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\Microsoft.Web.Infrastructure.dll
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\Newtonsoft.Json.dll
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\System.IO.dll
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\System.Net.Http.Formatting.dll
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\System.Runtime.dll
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\System.Threading.Tasks.dll
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\System.Web.Helpers.dll
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\System.Web.Http.dll
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\System.Web.Http.WebHost.dll
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\System.Web.Mvc.dll
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\System.Web.Razor.dll
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\System.Web.WebPages.Deployment.dll
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\System.Web.WebPages.dll
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\System.Web.WebPages.Razor.dll
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\System.Net.Http.dll
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\AutoMapper.xml
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\EntityFramework.xml
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\System.IO.xml
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\System.Runtime.xml
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\System.Threading.Tasks.xml
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\Newtonsoft.Json.xml
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\System.Net.Http.Formatting.xml
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\System.Web.Helpers.xml
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\System.Web.Http.xml
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\System.Web.Http.WebHost.xml
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\System.Web.Mvc.xml
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\System.Web.Razor.xml
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\System.Web.WebPages.xml
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\System.Web.WebPages.Deployment.xml
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\System.Web.WebPages.Razor.xml
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\bin\System.Net.Http.xml
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\obj\Debug\LibraryAutomationSystem.csproj.App.config
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\obj\Debug\LibraryAutomationSystem.csprojResolveAssemblyReference.cache
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\obj\Debug\LibraryAutomationSystem.Migrations.intialcreate.resources
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\obj\Debug\LibraryAutomationSystem.csproj.GenerateResource.Cache
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\obj\Debug\LibraryAutomationSystem.dll
+C:\MyProject\LibraryAutomationSystem\LibraryAutomationSystem\obj\Debug\LibraryAutomationSystem.pdb

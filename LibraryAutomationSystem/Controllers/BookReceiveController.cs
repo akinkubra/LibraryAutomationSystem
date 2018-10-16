@@ -94,13 +94,13 @@ namespace LibraryAutomationSystem.Controllers
 
         }
 
-        public JsonResult BookListByCategoryId(int categoryId)
-        {
-            List<string> books = (from b in islemler.Books
-                where b.CategoryId == categoryId
-                select b.BookName).ToList();
-            return books;
-        }
+        //public JsonResult BookListByCategoryId(int categoryId)
+        //{
+        //    List<string> books = (from b in islemler.Books
+        //        where b.CategoryId == categoryId
+        //        select b.BookName).ToList();
+        //    return books;
+        //}
 
 
     }
