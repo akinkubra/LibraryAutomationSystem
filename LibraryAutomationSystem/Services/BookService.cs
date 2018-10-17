@@ -49,6 +49,7 @@ namespace LibraryAutomationSystem.Services
             penalty.PenaltyQuantity = 0;
             bookDC.Penalties.Add(penalty);
             bookDC.SaveChanges();
+
         }
 
         public void BookGive(BookViewModel bookVm, string session)
